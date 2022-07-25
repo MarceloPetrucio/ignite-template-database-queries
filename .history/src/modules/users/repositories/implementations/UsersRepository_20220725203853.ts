@@ -22,7 +22,7 @@ export class UsersRepository implements IUsersRepository {
   }
 
   async findAllUsersOrderedByFirstName(): Promise<User[]> {   
-    return this.repository.query("select * from users order by first_name");
+    return this.repository.query("select * from users order by first_name"); // Complete usando raw query
   }
 
   async findUserByFullName({
@@ -32,6 +32,6 @@ export class UsersRepository implements IUsersRepository {
     return this.repository.query("select * from users where lower(first_name) = $1 and lower(last_name) = $2", [
       first_name.toLowerCase(),
       last_name.toLowerCase()
-    ]);
+    ]); // Complete usando raw query
   }
 }

@@ -5,9 +5,7 @@
   "license": "MIT",
   "scripts": {
     "lint:fix": "eslint --fix src --ext ts,tsx",
-    "test": "jest",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
-    "typeorm:migration:run": "npm run typeorm -- migration:run"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",

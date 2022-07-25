@@ -28,8 +28,9 @@ export class GamesRepository implements IGamesRepository {
     const games =  await this.repository
       .createQueryBuilder("games")
       .innerJoinAndSelect('games.users','users')
-      .where('games.id = :id', {id}).getOne();
+      .where('id = :id', {id}).getOne();
 
     return games?.users || [];
+    // Complete usando query builder
   }
 }

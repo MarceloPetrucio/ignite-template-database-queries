@@ -30,6 +30,9 @@ export class GamesRepository implements IGamesRepository {
       .innerJoinAndSelect('games.users','users')
       .where('games.id = :id', {id}).getOne();
 
+    console.log(games);
+
     return games?.users || [];
+    // Complete usando query builder
   }
 }

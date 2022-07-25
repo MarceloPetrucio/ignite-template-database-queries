@@ -31,5 +31,6 @@ export class GamesRepository implements IGamesRepository {
       .where('games.id = :id', {id}).getOne();
 
     return games?.users || [];
+    // Complete usando query builder
   }
 }
